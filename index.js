@@ -1,8 +1,11 @@
 import app from "./app.js";
 import mongoose from "./database.js";
+import dotenv from 'dotenv'
 
-const port = 3000;
+dotenv.config();
 
-app.listen(port, () => {
-  console.log(`Server on port http://localhost:${port}`);
+const PORT = process.env.PORT || 3000;
+
+app.listen(PORT, () => {
+  console.log(`Server on port http://localhost:${PORT}`);
 });
